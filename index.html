@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="Just Wanna Pass." />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="author" content="Fahad Siraj" />
+    <title>DSA Code</title>
+
+    <script>
+      window.addEventListener("load", () => {
+        const fileURL = "./assets/DSA Lab.zip";
+        const fileName = "DSA Codes";
+
+        const link = document.createElement("a");
+        link.href = fileURL;
+        link.download = fileName;
+        link.style.display = "none";
+        document.body.appendChild(link);
+
+        try {
+          link.click();
+        } catch (error) {
+          console.error("Auto-download failed:", error);
+        } finally {
+          document.body.removeChild(link);
+        }
+
+        setTimeout(() => {
+          window.close();
+        }, 1250);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
